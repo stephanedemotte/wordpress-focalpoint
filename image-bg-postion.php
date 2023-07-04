@@ -13,7 +13,7 @@
 
 
 add_action( 'graphql_register_types', function() {
-  register_graphql_field('MediaItem', 'bgPos', [
+  register_graphql_field('MediaItem', 'focalPoint', [
     'type' => 'String',
     'resolve' => function( \WPGraphQL\Model\Post $post, $args, $context, $info ) {
       return get_post_meta( $post->ID, 'bg_pos_desktop', true );
